@@ -1,0 +1,456 @@
+/* Never Better Yoga — practice replica
+   Palette + fonts approximate the live Wix site (neverbetteryoga.com) */
+
+:root {
+  --purple-dark: #55184a;
+  --purple-darker: #3a0f33;
+  --pink-bright: #e51281;
+  --pink-mid: #c91672;
+  --marble-1: #c0116e;
+  --marble-2: #e94ba0;
+  --marble-3: #8a0f52;
+  --white: #ffffff;
+  --text-dark: #3d1136;
+
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Lora', serif;
+  --font-script: 'Caveat', cursive;
+  --font-logo: 'Playfair Display', serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background: var(--white);
+}
+
+img { max-width: 100%; display: block; }
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header / Nav ---------- */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 18px 24px;
+  background: var(--white);
+  border-bottom: 4px solid var(--pink-bright);
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+.nav a.active,
+.nav a:hover {
+  color: var(--pink-bright);
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--text-dark);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+/* ---------- Hero (Home) ---------- */
+
+.hero {
+  position: relative;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  padding: 60px 24px;
+  background:
+    linear-gradient(120deg, rgba(20, 10, 20, 0.55), rgba(20, 40, 20, 0.35)),
+    linear-gradient(160deg, #1c2b1a, #35482f 40%, #223318 100%);
+  color: var(--white);
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "Hero photo placeholder \2014 replace with the handstand/plants photo from the live site";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 12px;
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.35);
+  text-align: right;
+  max-width: 220px;
+  margin-left: auto;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-headline-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.hero-headline {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  background: rgba(58, 15, 51, 0.75);
+  padding: 18px 28px;
+  margin: 0;
+  flex: 1 1 420px;
+}
+
+.logo-badge {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
+}
+
+.logo-badge .script {
+  font-family: var(--font-script);
+  color: var(--pink-bright);
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.logo-badge .logo-yoga {
+  font-family: var(--font-logo);
+  color: var(--text-dark);
+  font-weight: 800;
+  font-size: 1.9rem;
+  margin-top: 4px;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 320px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 16px 28px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-white {
+  background: var(--white);
+  color: var(--pink-mid);
+}
+
+.btn-pink {
+  background: var(--pink-bright);
+  color: var(--white);
+}
+
+.btn-dark {
+  background: var(--purple-dark);
+  color: var(--white);
+}
+
+.intro-card {
+  background: var(--white);
+  color: var(--purple-dark);
+  padding: 28px 32px;
+  max-width: 420px;
+  margin-left: auto;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.intro-card strong {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+}
+
+.footer-social-bar {
+  background: var(--purple-dark);
+  padding: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-social-bar a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--purple-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* ---------- Marble section (About, footer strip) ---------- */
+
+.marble-section {
+  background:
+    radial-gradient(circle at 20% 20%, var(--marble-2), transparent 55%),
+    radial-gradient(circle at 80% 30%, var(--marble-3), transparent 60%),
+    radial-gradient(circle at 50% 90%, var(--marble-2), transparent 60%),
+    linear-gradient(160deg, var(--marble-1), var(--marble-3));
+  color: var(--white);
+  padding: 70px 24px;
+}
+
+/* ---------- About page ---------- */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.about-heading {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2.6rem;
+  letter-spacing: 0.15em;
+  text-align: right;
+  margin: 0 0 24px;
+}
+
+.about-text {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.about-text p { margin: 0 0 24px; }
+
+.about-text a {
+  color: var(--white);
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.photo-grid {
+  background: var(--white);
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+}
+
+.photo-placeholder {
+  background: linear-gradient(135deg, #cfd9c7, #9fb08e);
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgba(40, 40, 20, 0.55);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  padding: 10px;
+}
+
+/* ---------- Schedule / Live Classes page ---------- */
+
+.schedule-hero {
+  background:
+    linear-gradient(120deg, rgba(20,10,20,0.6), rgba(20,40,20,0.4)),
+    linear-gradient(160deg, #1c2b1a, #35482f 40%, #223318 100%);
+  color: var(--white);
+  padding: 60px 24px 90px;
+  text-align: left;
+}
+
+.schedule-hero h1 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.class-cards {
+  max-width: 1200px;
+  margin: -60px auto 0;
+  padding: 0 24px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.class-card {
+  padding: 36px;
+  font-family: var(--font-body);
+}
+
+.class-card.dark {
+  background: var(--purple-dark);
+  color: var(--white);
+}
+
+.class-card.light {
+  background: var(--white);
+  color: var(--purple-dark);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.05);
+}
+
+.class-card h2 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin: 0 0 16px;
+}
+
+.class-card p.description {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.class-card .meta {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+
+.class-card .meta .label {
+  display: block;
+  font-weight: 700;
+}
+
+.class-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.class-card .name-row {
+  display: flex;
+  gap: 12px;
+}
+
+.class-card input {
+  font-family: var(--font-body);
+  padding: 14px 16px;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.class-card.dark input {
+  background: var(--white);
+  color: var(--text-dark);
+}
+
+.class-card.light input {
+  background: var(--purple-dark);
+  color: var(--white);
+}
+.class-card.light input::placeholder { color: rgba(255,255,255,0.75); }
+.class-card.dark input::placeholder { color: rgba(61,17,54,0.6); }
+
+.class-card .card-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--purple-darker);
+  color: var(--white);
+  text-align: center;
+  padding: 24px;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 860px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-heading { text-align: center; }
+  .class-cards { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .site-header { justify-content: center; text-align: center; }
+  .nav { justify-content: center; }
+  .hero { min-height: auto; padding: 40px 16px; }
+  .hero-headline-row { flex-direction: column; align-items: flex-start; }
+  .logo-badge { margin: 0 auto; }
+  .intro-card { margin: 0 auto; }
+  .class-card .name-row { flex-direction: column; }
+}
