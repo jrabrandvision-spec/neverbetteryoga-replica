@@ -161,21 +161,22 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  line-height: 1;
+  line-height: 0.95;
+  padding: 8px;
 }
 
-.logo-badge .script {
-  font-family: var(--font-script);
+.logo-badge .logo-pink {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
   color: var(--pink-bright);
-  font-size: 1.9rem;
-  font-weight: 600;
+  font-size: 1.55rem;
 }
 
 .logo-badge .logo-yoga {
   font-family: var(--font-logo);
-  color: var(--text-dark);
-  font-weight: 800;
-  font-size: 1.9rem;
+  color: var(--purple-dark);
+  font-weight: 900;
+  font-size: 2rem;
   margin-top: 4px;
 }
 
