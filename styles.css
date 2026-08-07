@@ -140,29 +140,6 @@ a { text-decoration: none; color: inherit; }
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background: var(--white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  line-height: 0.95;
-  padding: 8px;
-}
-
-.logo-badge .logo-pink {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  color: var(--pink-bright);
-  font-size: 1.55rem;
-}
-
-.logo-badge .logo-yoga {
-  font-family: var(--font-logo);
-  color: var(--purple-dark);
-  font-weight: 900;
-  font-size: 2rem;
-  margin-top: 4px;
 }
 
 .hero-ctas {
