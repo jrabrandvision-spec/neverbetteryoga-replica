@@ -96,7 +96,7 @@ a { text-decoration: none; color: inherit; }
 
 .hero {
   position: relative;
-  min-height: 640px;
+  min-height: 1150px;
   display: flex;
   align-items: center;
   padding: 60px 24px;
@@ -104,7 +104,7 @@ a { text-decoration: none; color: inherit; }
     linear-gradient(120deg, rgba(20, 10, 20, 0.45), rgba(20, 40, 20, 0.15)),
     url("images/hero-handstand.jpg");
   background-size: cover;
-  background-position: 68% 35%;
+  background-position: center center;
   color: var(--white);
   overflow: hidden;
 }
