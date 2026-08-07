@@ -101,27 +101,12 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   padding: 60px 24px;
   background:
-    linear-gradient(120deg, rgba(20, 10, 20, 0.55), rgba(20, 40, 20, 0.35)),
-    linear-gradient(160deg, #1c2b1a, #35482f 40%, #223318 100%);
+    linear-gradient(120deg, rgba(20, 10, 20, 0.45), rgba(20, 40, 20, 0.15)),
+    url("images/hero-handstand.jpg");
+  background-size: cover;
+  background-position: 68% 35%;
   color: var(--white);
   overflow: hidden;
-}
-
-.hero::after {
-  content: "Hero photo placeholder \2014 replace with the handstand/plants photo from the live site";
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding: 12px;
-  font-family: var(--font-heading);
-  font-size: 0.7rem;
-  color: rgba(255,255,255,0.35);
-  text-align: right;
-  max-width: 220px;
-  margin-left: auto;
-  pointer-events: none;
 }
 
 .hero-inner {
@@ -451,6 +436,7 @@ a { text-decoration: none; color: inherit; }
   .nav { justify-content: center; }
   .hero { min-height: auto; padding: 40px 16px; }
   .hero-headline-row { flex-direction: column; align-items: flex-start; }
+  .hero-headline { flex: none; width: 100%; }
   .logo-badge { margin: 0 auto; }
   .intro-card { margin: 0 auto; }
   .class-card .name-row { flex-direction: column; }
